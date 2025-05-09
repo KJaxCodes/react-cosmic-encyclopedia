@@ -1,4 +1,5 @@
 import { Outlet, NavLink } from "react-router-dom";
+import BackButton from "../BackButton";
 
 export default function RootLayout() {
     return (
@@ -15,6 +16,7 @@ export default function RootLayout() {
                 </nav>
             </header>
             <main>
+                <BackButton />
                 <Outlet />
             </main>
         </div>
