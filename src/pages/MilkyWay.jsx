@@ -1,4 +1,11 @@
+import { useState, useEffect } from "react"
+import PlanetsObject from "../data/PlanetsObject"
+//
+import { Outlet, Link } from "react-router-dom";
+
 export default function MilkyWay() {
+    const [planets, setPlanets] = useState(PlanetsObject);
+
     return (
         <div>
             <h1>The Milky Way</h1>
@@ -8,6 +15,17 @@ export default function MilkyWay() {
                 alt="A galaxy in space"
                 style={{ maxWidth: '50%', height: 'auto', borderRadius: '8px' }}
             />
+            {
+                planets.map((planet) => {
+                    return (
+                        <div key={planet.id} style={{ border: "1px solid cyan", marginBottom: "5px", padding: "1em" }}>
+                            <div>Name: {planet.name}</div>
+                            <Link to={planet.name}>Show Details</Link>
+                        </div>
+                    )
+                })
+            }
+            <Outlet />
         </div>
 
 

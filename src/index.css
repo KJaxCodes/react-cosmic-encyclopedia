@@ -2,8 +2,7 @@
 
 :root {
   --primary: rgb(255, 200, 0);
-  --secondary: rgba(0, 0, 0, 0.911)
-  ;
+  --secondary: rgba(0, 0, 0, 0.911);
 }
 
 body {
@@ -45,6 +44,11 @@ header nav h1 {
   border-bottom: 3px solid var(--primary);
 }
 
+header nav h2 {
+  margin-right: auto;
+
+}
+
 header nav a {
   text-decoration: none;
   padding: 6px;
@@ -71,5 +75,6 @@ button.back-button {
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  z-index: 1000; /* Ensure it stays on top */
+  z-index: 1000;
+  /* Ensure it stays on top */
 }
